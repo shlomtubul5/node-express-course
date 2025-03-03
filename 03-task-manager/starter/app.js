@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 const tasks = require('./routes/tasks');
 
+app.use(express.json());
+
 app.get('/hello', (req, res) => {
   res.send('Task Manager App');
 });

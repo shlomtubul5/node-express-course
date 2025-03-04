@@ -5,6 +5,7 @@ dotenv.config();
 const connectDB = require('./DB/connect');
 const tasks = require('./routes/tasks');
 
+app.use(express.static('./public'))
 app.use(express.json());
 app.get('/hello', (req, res) => {
   res.send('Task Manager App');
